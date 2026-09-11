@@ -137,7 +137,7 @@ The main lesson: patterns are for solving a problem you actually have — not so
 ## Running it
 
 ```bash
-cd container-presenter
+cd 01-container-presenter-design
 npm install
 npm run dev
 ```
