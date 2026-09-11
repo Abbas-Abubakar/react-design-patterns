@@ -146,7 +146,7 @@ None of these patterns are rules. A pattern that makes one codebase easier to wo
 
 ## Credit
 
-These projects follow the tasks from Tapas Adhikary's course on React design patterns. He's the reason this repo exists in the first place — the structure and the pattern breakdown come from his course, and I'm building each one out myself to make sure it actually sticks. Go check out his work if you're after the same thing: tapasadhikary.com.
+These projects follow the tasks from Tapas Adhikary's course on React design patterns. He's the reason this repo exists in the first place — the structure and the pattern breakdown come from his course, and I'm building each one out myself to make sure it actually sticks. Go check out his work if you're after the same thing: tapascript.io.
 
 ---
 
