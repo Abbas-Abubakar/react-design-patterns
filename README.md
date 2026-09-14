@@ -6,13 +6,13 @@ I kept running into the same problem: I could build components, but I couldn't a
 
 ## Patterns
 
-| Pattern                                                   | What it does                                    | Status         |
-| ---------------------------------------------              | ------------------------------------------------ | -------------- |
-| [Container-Presenter](./container-presenter)               | Splits data logic from UI rendering               | Done           |
-| [Controlled-&-Uncontrolled-forms](./compound-components)   | Lets components share state implicitly            | Coming         |
-| [Render Props](./render-props)                             | Shares behavior via a function prop               | Coming         |
-| [Custom Hooks](./custom-hooks)                             | Pulls stateful logic out of components            | Coming         |
-| [Context](./context)                                       | Passes data down a tree without prop drilling     | Coming         |
+| Pattern                                                                   | What it does                                    | Status         |
+| ---------------------------------------------                              | ------------------------------------------------ | -------------- |
+| [Container-Presenter](./container-presenter)                               | Splits data logic from UI rendering               | Done           |
+| [Controlled-&-Uncontrolled-forms](./controlled-uncontrolled-componente)    | Explores React-managed vs DOM-managed state.      | Coming         |
+| [Render Props](./render-props)                                             | Shares behavior via a function prop               | Coming         |
+| [Custom Hooks](./custom-hooks)                                             | Pulls stateful logic out of components            | Coming         |
+| [Context](./context)                                                       | Passes data down a tree without prop drilling     | Coming         |
 
 ---
 
@@ -141,6 +141,12 @@ None of these patterns are rules. A pattern that makes one codebase easier to wo
 - [ ] Custom Hooks
 - [ ] Context
 - [ ] More patterns as I get to them
+
+---
+
+## Credit
+
+These projects follow the tasks from Tapas Adhikary's course on React design patterns. He's the reason this repo exists in the first place — the structure and the pattern breakdown come from his course, and I'm building each one out myself to make sure it actually sticks. Go check out his work if you're after the same thing: tapascript.io.
 
 ---
 
