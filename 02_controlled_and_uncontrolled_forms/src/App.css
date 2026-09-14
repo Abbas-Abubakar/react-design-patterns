@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+.contact-form {
+  --lime: #c8ff3d;
+  --lime-glow: rgba(200, 255, 61, 0.45);
+ 
+  position: relative;
+  max-width: 26rem;
+  margin: 3rem auto;
+  padding: 2.25rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+ 
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  color: #eafbe0;
+ 
+  background-color: black;
+  border: 1px solid rgba(var(--lime), 0.25);
+  border-radius: 18px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow:
+    0 0 0 1px rgba(200, 255, 61, 0.06) inset,
+    0 0 40px rgba(200, 255, 61, 0.08),
+    0 20px 45px rgba(0, 0, 0, 0.45);
+}
+ 
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+ 
+.contact-form__label {
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: rgba(234, 251, 224, 0.65);
+}
+ 
+.contact-form__input,
+.contact-form__textarea {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(200, 255, 61, 0.2);
+  border-radius: 10px;
+  padding: 0.7rem 0.85rem;
+  font-family: inherit;
+  font-size: 0.92rem;
+  color: #eafbe0;
+  outline: none;
+  resize: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+ 
+.contact-form__input::placeholder,
+.contact-form__textarea::placeholder {
+  color: rgba(234, 251, 224, 0.32);
+}
+ 
+.contact-form__input:hover,
+.contact-form__textarea:hover {
+  border-color: rgba(200, 255, 61, 0.4);
+}
+ 
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  border-color: var(--lime);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 0 3px rgba(200, 255, 61, 0.12), 0 0 18px var(--lime-glow);
+}
+ 
+.contact-form__submit {
+  margin-top: 0.4rem;
+  align-self: flex-start;
+  background: var(--lime);
+  color: #0a0f0a;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.6rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.15s ease, background 0.2s ease;
+}
+ 
+.contact-form__submit:hover {
+  background: #d9ff70;
+  box-shadow: 0 0 16px var(--lime-glow), 0 0 40px rgba(200, 255, 61, 0.25);
+}
+ 
+.contact-form__submit:active {
+  transform: translateY(1px);
+}
+ 
+.contact-form__submit:focus-visible,
+.contact-form__input:focus-visible,
+.contact-form__textarea:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 2px;
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  .contact-form * {
+    transition: none !important;
+  }
+}
+ 
