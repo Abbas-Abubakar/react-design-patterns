@@ -9,8 +9,8 @@ I kept running into the same problem: I could build components, but I couldn't a
 | Pattern                                                                   | What it does                                    | Status         |
 | ---------------------------------------------                              | ------------------------------------------------ | -------------- |
 | [Container-Presenter](./container-presenter)                               | Splits data logic from UI rendering               | Done           |
-| [Controlled-&-Uncontrolled-forms](./controlled-uncontrolled-componente)    | Explores React-managed vs DOM-managed state.      | Coming         |
-| [Render Props](./render-props)                                             | Shares behavior via a function prop               | Coming         |
+| [Controlled-&-Uncontrolled-forms](./controlled-uncontrolled-componente)    | Explores React-managed vs DOM-managed state.      | Done         |
+| [Compound-components](./compound-components)                               | Share state and behavior implicitly among a group of smaller, specialized child components               | Done         |
 | [Custom Hooks](./custom-hooks)                                             | Pulls stateful logic out of components            | Coming         |
 | [Context](./context)                                                       | Passes data down a tree without prop drilling     | Coming         |
 
