@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+.card {
+  --lime: #c8ff3d;
+  --lime-dim: #8fce2a;
+  --lime-08: rgba(200, 255, 61, 0.08);
+  --lime-18: rgba(200, 255, 61, 0.18);
+  --lime-35: rgba(200, 255, 61, 0.35);
+
+  position: relative;
+  background: #12180f;
+  border: 1px solid var(--lime-18);
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  color: #e8f2df;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.18s ease;
+  max-width: 22rem;
+}
+
+.card:hover,
+.card:focus-within {
+  border-color: var(--lime-35);
+}
+
+/* ---------- Media / icon ---------- */
+
+.card__media {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #0d130b;
+  border-bottom: 1px solid var(--lime-18);
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.92);
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.card:hover .card__img {
+  transform: scale(1.03);
+  filter: saturate(1);
+}
+
+.card__icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lime);
+  border: 1px solid var(--lime-35);
+  border-radius: 999px;
+  margin: 1.25rem auto 0;
+  font-size: 1.4rem;
+}
+
+/* ---------- Badge / favorite ---------- */
+
+.card__badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: var(--lime);
+  color: #0a0f0a;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.28rem 0.55rem;
+  z-index: 1;
+}
+
+.card__favorite {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  z-index: 1;
+  width: 2.1rem;
+  height: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 15, 10, 0.6);
+  border: 1px solid var(--lime-18);
+  color: #e8f2df;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  transition: color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card__favorite:hover {
+  color: var(--lime);
+  border-color: var(--lime-35);
+  box-shadow: 0 0 0.7rem rgba(200, 255, 61, 0.25);
+}
+
+/* ---------- Body ---------- */
+
+.card__body {
+  padding: 1.1rem 1.1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.card__title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.card__description {
+  color: #8b9a83;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.card__meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0.3rem 0 0.2rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.85rem;
+}
+
+.card__rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #e8f2df;
+}
+
+.card__star {
+  color: var(--lime);
+}
+
+.card__price {
+  color: var(--lime);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* ---------- Actions ---------- */
+
+.card__footer {
+  display: flex;
+  gap: 0.6rem;
+ padding: 0.5rem 1.1rem 1.25rem;
+
+}
+
+.card__cta,
+.card__add-to-cart {
+  flex: 1;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.65rem 0.9rem;
+  cursor: pointer;
+  transition: box-shadow 0.18s ease, transform 0.18s ease, background 0.18s ease;
+}
+
+.card__cta {
+  background: var(--lime);
+  color: #0a0f0a;
+}
+
+.card__cta:hover {
+  background: var(--lime-dim);
+  box-shadow: 0 0 0.9rem rgba(200, 255, 61, 0.35);
+}
+
+.card__add-to-cart {
+  background: transparent;
+  color: var(--lime);
+  border: 1px solid var(--lime-35);
+}
+
+.card__add-to-cart:hover {
+  border-color: var(--lime);
+  box-shadow: 0 0 0.6rem rgba(200, 255, 61, 0.22);
+}
+
+.card__cta:active,
+.card__add-to-cart:active {
+  transform: translateY(1px);
+}
+
+.card__favorite:focus-visible,
+.card__cta:focus-visible,
+.card__add-to-cart:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 2px;
+}
+
+/* ---------- Variants ---------- */
+
+/* Feature: icon-led, centered, no media crop */
+.card--feature .card__body {
+  text-align: center;
+  align-items: center;
+}
+
+.card--feature .card__meta {
+  justify-content: center;
+}
+
+/* Course: media on top like product, but CTA reads as enrollment */
+.card--course .card__cta {
+  width: 100%;
+}
+
+/* Profile: circular avatar, centered identity block */
+.card--profile {
+  align-items: center;
+  text-align: center;
+  padding-top: 1.75rem;
+}
+
+.card--profile .card__media {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 999px;
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--lime-35);
+}
+
+.card--profile .card__body {
+  align-items: center;
+}
+
+.card--profile .card__meta {
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card * {
+    transition: none !important;
+  }
+}
+
+/* =========================
+   Tabs Container
+   ========================= */
+
+.tabs {
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem auto;
+
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+/* =========================
+   Tabs List
+   ========================= */
+
+.tabs_list {
+  display: flex;
+  gap: 0.5rem;
+
+  padding: 0.75rem;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* =========================
+   Tab Buttons
+   ========================= */
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.65rem 1rem;
+
+  border: none;
+  border-radius: 6px;
+
+  background: transparent;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  color: #6b7280;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.tab:hover {
+  color: #111827;
+}
+
+.tab.active {
+  color: #2563eb;
+}
+
+
+/* =========================
+   Tab Content
+   ========================= */
+
+.tabs__content {
+  min-height: 150px;
+  padding: 2rem;
+}
+
+.tabs__content h2 {
+  margin: 0 0 0.5rem;
+
+  font-size: 1.4rem;
+  color: #111827;
+}
+
+.tabs__content p {
+  margin: 0;
+
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+
+/* =========================
+   Default Variant
+   ========================= */
+
+.tabs-default .tab.active {
+  background: #eff6ff;
+}
+
+
+/* =========================
+   Pills Variant
+   ========================= */
+
+.tabs-pills .tabs_list {
+  border-bottom: none;
+  background: #f3f4f6;
+  border-radius: 8px;
+}
+
+.tabs-pills .tab {
+  border-radius: 999px;
+}
+
+.tabs-pills .tab.active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+
+/* =========================
+   Underline Variant
+   ========================= */
+
+.tabs-underline .tabs_list {
+  gap: 1.5rem;
+}
+
+.tabs-underline .tab {
+  position: relative;
+
+  padding: 0.75rem 0.25rem;
+
+  border-radius: 0;
+}
+
+.tabs-underline .tab.active {
+  color: #2563eb;
+}
+
+.tabs-underline .tab.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: -0.75rem;
+
+  height: 2px;
+
+  background: #2563eb;
+}
